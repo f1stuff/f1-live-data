@@ -1,0 +1,9 @@
+apiVersion: 1
+
+providers:
+  - name: DefaultProvider
+    orgId: 1
+    folder: F1
+    type: file
+    options:
+      path: /tmp/dashboards/

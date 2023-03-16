@@ -66,7 +66,7 @@ To add the color of a driver to a panel via the UI can be annoying.
 There is a command line tool do accomplish that.
 Just pass the path of the dashboard and the names of the panels:
 ```shell
-python src/dataimporter/dashboard_utils.py src/dataimporter/dashboard.json "Lap time" "Gap To Leader"
+python src/dataimporter/dashboard_utils.py storage/grafana/dashboards/dashboard.json "Lap time" "Gap To Leader"
 ```
 
 ### Edit and persist a grafana panel:

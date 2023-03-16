@@ -25,4 +25,4 @@ services:
             - DOCKER_INFLUXDB_INIT_BUCKET=data
             - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=LoOFvHw1tUXrUZ8oUqaozmEjxxG9UNO5H5YfRI4cGu306xwQVu_KMNxRYRMrWbhdD886N2PuRgpo9v4v_58pHw==
         volumes:
-            - './storage/influxdb:/var/lib/influxdb'
+            - './storage/influxdb:/var/lib/influxdb2'

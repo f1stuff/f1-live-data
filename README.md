@@ -2,16 +2,26 @@
 You want a better view of the live data of a F1 race? f1-live-data is easy to use and customizable to your needs.
 
 ## Quick start
-
+Tested on Ubuntu 20.04
 ```
 chmod -R 777 storage/
 docker-compose up -d
 docker build -t data-importer-image .
 
 # if a f1 race is currently under way:
-docker run -it --rm --network f1-live-data_default data-importer-image data-importer process-live-session
+docker run -it --rm \
+--network f1-live-data_default \
+data-importer-image \
+data-importer process-live-session \
+--influx-url http://influxdb:8086
+
 # else
-docker run -it --rm --network f1-live-data_default -v ${PWD}/saves/partial_saved_data_2023_03_05.txt:/tmp/save.txt data-importer-image dataimporter process-mock-data /tmp/save.txt --influx-url http://influxdb:8086
+docker run -it --rm \
+--network f1-live-data_default \
+-v ${PWD}/saves/partial_saved_data_2023_03_05.txt:/tmp/save.txt \
+data-importer-image \
+dataimporter process-mock-data /tmp/save.txt \
+--influx-url http://influxdb:8086
 
 # Browse http://localhost:3000
 # admin / admin

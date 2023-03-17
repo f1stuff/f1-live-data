@@ -203,7 +203,7 @@
             "type": "influxdb",
             "uid": "P951FEA4DE68E13C5"
           },
-          "query": "gapData = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"gapToLeader\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"GapToLeaderHumanReadable\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\"])\r\n  \r\nintervalData = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"intervalToPositionAhead\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"IntervalToPositionAhead\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\"])\r\n\r\nlastLapData = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"lastLapTime\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"LastLapTime\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\"])\r\n\r\nnumberLapsData = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"numberOfLaps\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"NumberOfLaps\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\", \"_time\"]) \r\n\r\nintermediateJoinData1 = join(\r\n    tables: {gap:gapData, interval:intervalData},\r\n    on: [\"driver\"],\r\n)\r\n\r\n  \r\nintermediateJoinData2 = join(\r\n    tables: {intermediateJoin1:intermediateJoinData1, numberLaps:numberLapsData},\r\n    on: [\"driver\"],\r\n)\r\n\r\njoin(\r\n    tables: {intermediateJoin:intermediateJoinData2, lastLap:lastLapData},\r\n    on: [\"driver\"],\r\n) |> sort(columns: [\"_time\"], desc: false)\r\n  |> sort(columns: [\"_value_intermediateJoin\"], desc: true)\r\n  |> fill(column: \"position\", value: 1.0)\r\n  |> cumulativeSum(columns: [\"position\"])\r\n  |> map(fn: (r) => ({ r with interval: r._value_interval * 1000.0 }))\r\n  |> map(fn: (r) => ({ r with lastLap: r._value_lastLap * 1000.0 }))",
+          "query": "gapDataHumanReadable = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"gapToLeader\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"GapToLeaderHumanReadable\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\"])\r\n\r\ngapData = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"gapToLeader\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"GapToLeader\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\"])\r\n  \r\nintervalData = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"intervalToPositionAhead\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"IntervalToPositionAhead\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\"])\r\n\r\nlastLapData = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"lastLapTime\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"LastLapTime\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\"])\r\n\r\nnumberLapsData = from(bucket: \"data\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"numberOfLaps\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"NumberOfLaps\")\r\n  |> last()\r\n  |> group()\r\n  |> keep(columns: [\"driver\", \"_value\", \"_time\"]) \r\n\r\nintermediateJoinData1 = join(\r\n    tables: {gapHumanReadable:gapDataHumanReadable, interval:intervalData},\r\n    on: [\"driver\"],\r\n)\r\n\r\n  \r\nintermediateJoinData2 = join(\r\n    tables: {intermediateJoin1:intermediateJoinData1, numberLaps:numberLapsData},\r\n    on: [\"driver\"],\r\n)\r\n  \r\nintermediateJoinData3 = join(\r\n    tables: {intermediateJoin1:intermediateJoinData2, gap:gapData},\r\n    on: [\"driver\"],\r\n)\r\n\r\njoin(\r\n    tables: {intermediateJoin:intermediateJoinData3, lastLap:lastLapData},\r\n    on: [\"driver\"],\r\n) |> sort(columns: [\"_time\"], desc: false)  \r\n  |> sort(columns: [\"_value_gap\"], desc: false)\r\n  |> sort(columns: [\"_value_intermediateJoin1\"], desc: true)\r\n  |> fill(column: \"position\", value: 1.0)\r\n  |> cumulativeSum(columns: [\"position\"])\r\n  |> map(fn: (r) => ({ r with interval: r._value_interval * 1000.0 }))\r\n  |> map(fn: (r) => ({ r with lastLap: r._value * 1000.0 }))",
           "refId": "A"
         }
       ],
@@ -215,14 +215,16 @@
             "excludeByName": {
               "_time": true,
               "_value": true,
-              "_value_gap": false,
-              "_value_intermediateJoin": true,
+              "_value_gap": true,
+              "_value_intermediateJoin": false,
+              "_value_intermediateJoin1": true,
               "_value_interval": true,
-              "_value_lastLap": true
+              "_value_lastLap": false,
+              "lastLap": false
             },
             "indexByName": {
               "_time": 6,
-              "_value_gap": 4,
+              "_value_gapHumanReadable": 4,
               "_value_intermediateJoin": 7,
               "_value_interval": 2,
               "_value_lastLap": 8,
@@ -232,8 +234,12 @@
               "position": 0
             },
             "renameByName": {
-              "_value_gap": "Gap Leader",
+              "_time": "",
+              "_value": "",
+              "_value_gap": "",
+              "_value_gapHumanReadable": "Gap Leader",
               "_value_interval": "",
+              "_value_lastLap": "",
               "driver": " ",
               "gap": "Gap Leader",
               "interval": "Interval",
@@ -1326,7 +1332,7 @@
       "type": "timeseries"
     }
   ],
-  "refresh": "5s",
+  "refresh": false,
   "revision": 1,
   "schemaVersion": 38,
   "style": "dark",
@@ -1369,8 +1375,8 @@
     ]
   },
   "time": {
-    "from": "now-1h",
-    "to": "now"
+    "from": "2023-03-17T21:39:50.000Z",
+    "to": "2023-03-17T21:47:02.000Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -1383,6 +1389,6 @@
   "timezone": "",
   "title": "F1Race",
   "uid": "3fbFhK-4k",
-  "version": 10,
+  "version": 1,
   "weekStart": ""
 }

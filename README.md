@@ -9,7 +9,7 @@ docker build -t data-importer-image .
 # if a f1 race is currently under way:
 docker run -it --rm data-importer-image data-importer process-live-session
 # else
-docker run -it --rm --network f1-data-visualizer_default -v ${PWD}/saves/saved_data_2023_03_05.txt:/tmp/save.txt data-importer-image dataimporter process-mock-data /tmp/save.txt --influx-url http://influxdb:8086
+docker run -it --rm --network f1-data-visualizer_default -v ${PWD}/saves/partial_saved_data_2023_03_05.txt:/tmp/save.txt data-importer-image dataimporter process-mock-data /tmp/save.txt --influx-url http://influxdb:8086
 
 # Browse http://localhost:3000
 # admin / admin
@@ -20,7 +20,7 @@ docker run -it --rm --network f1-data-visualizer_default -v ${PWD}/saves/saved_d
 ```
 docker-compose up -d
 pip install .
-data-importer process-mock-data saves/saved_data_2023_03_05.txt --influx-url http://localhost:8086
+data-importer process-mock-data saves/partial_saved_data_2023_03_05.txt --influx-url http://localhost:8086
 ```
 
 ## Features

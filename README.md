@@ -12,7 +12,7 @@ docker build -t data-importer-image .
 docker run -it --rm \
 --network f1-live-data_default \
 data-importer-image \
-data-importer process-live-session \
+dataimporter process-live-session \
 --influx-url http://influxdb:8086
 
 # else

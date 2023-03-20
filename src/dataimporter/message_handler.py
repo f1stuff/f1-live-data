@@ -5,16 +5,16 @@ log = logging.getLogger(__name__)
 log.setLevel(logging.INFO)
 
 
-D_LOOKUP = [[44, 'HAM', 'Mercedes', '#38bba1'], [63, 'RUS', 'Mercedes', '#6CD3BF'],
-            [55, 'SAI', 'Ferrari', '#fa2d4c'], [16, 'LEC', 'Ferrari', '#F91536'],
-            [1, 'VER', 'Red Bull', '#3671C6'], [11, 'PER', 'Red Bull', '#264f8a'],
-            [81, 'PIA', 'McLaren', '#c05b09'], [4, 'NOR', 'McLaren', '#F58020'],
-            [14, 'ALO', 'Aston Martin', '#358C75'], [18, 'STR', 'Aston Martin', '#276756'],
-            [10, 'GAS', 'Alpine', '#2293D1'], [31, 'OCO', 'Alpine', '#5bb4e4'],
-            [22, 'TSU', 'AlphaTauri', '#5E8FAA'], [21, 'DEV', 'AlphaTauri', '#4a748b'],
-            [27, 'HUL', 'Haas F1 Team', '#B6BABD'], [20, 'MAG', 'Haas F1 Team', '#8e9499'],
-            [24, 'ZHO', 'Alfa Romeo', '#8a1f34'], [77, 'BOT', 'Alfa Romeo', '#C92D4B'],
-            [2, 'SAR', 'Williams', '#78d3e8'], [23, 'ALB', 'Williams', '#37BEDD']]
+D_LOOKUP = [[44, 'HAM', 'Mercedes', '#6CD3BF', 'SOLID'], [63, 'RUS', 'Mercedes', '#6CD3BF', 'DOT'],
+            [55, 'SAI', 'Ferrari', '#F91536', 'DOT'], [16, 'LEC', 'Ferrari', '#F91536', 'SOLID'],
+            [1, 'VER', 'Red Bull', '#3671C6', 'SOLID'], [11, 'PER', 'Red Bull', '#3671C6', 'DOT'],
+            [81, 'PIA', 'McLaren', '#F58020', 'DOT'], [4, 'NOR', 'McLaren', '#F58020', 'SOLID'],
+            [14, 'ALO', 'Aston Martin', '#358C75', 'SOLID'], [18, 'STR', 'Aston Martin', '#358C75', 'DOT'],
+            [10, 'GAS', 'Alpine', '#2293D1', 'SOLID'], [31, 'OCO', 'Alpine', '#2293D1', 'DOT'],
+            [22, 'TSU', 'AlphaTauri', '#5E8FAA', 'SOLID'], [21, 'DEV', 'AlphaTauri', '#5E8FAA', 'DOT'],
+            [27, 'HUL', 'Haas F1 Team', '#B6BABD', 'SOLID'], [20, 'MAG', 'Haas F1 Team', '#B6BABD', 'DOT'],
+            [24, 'ZHO', 'Alfa Romeo', '#C92D4B', 'DOT'], [77, 'BOT', 'Alfa Romeo', '#C92D4B', 'SOLID'],
+            [2, 'SAR', 'Williams', '#37BEDD', 'DOT'], [23, 'ALB', 'Williams', '#37BEDD', 'SOLID']]
 
 
 def driver_no_to_name(driver_no: str) -> str:

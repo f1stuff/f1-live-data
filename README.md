@@ -53,7 +53,11 @@ data-importer process-mock-data saves/partial_saved_data_2023_03_05.txt --influx
 └─────────────┘      └────────┘      └───────┘
 ```
 The `data-importer` uses the live timing client from `fastf1` to receive live timing data during a f1 session.
-The data is stored in an `influxdb`. `grafana` is used to display the data.
+The data is stored in an `influxdb`. `grafana` is used to display the data by querying it from `influxdb`.
+
+The `data-importer` has two modes:
+- process-live-session: Processes data from a live session via `fastf1` live timing client.
+- process-mock-data: Loads data from file and replays it (with a default speedup factor of 100). This mode can be used to develop new panels and debug it.
 
 ## Processed data
 `fastf1` provided a bunch of different data points. Not all of them are processed:
@@ -81,7 +85,7 @@ Just pass the path of the dashboard and the names of the panels:
 python src/dataimporter/dashboard_utils.py storage/grafana/dashboards/dashboard.json "Lap time" "Gap To Leader"
 ```
 
-### Edit and persist a grafana panel:
+### Edit and persist a grafana dashboard/panel:
 1. Edit the panel in the UI
 2. Click the save button
 3. Click "Copy JSON to clipboard"

@@ -99,7 +99,8 @@ You can set a maximum value in the panel settings.
 - data-importer disconnects after 2h (the f1 data providing service seems to close the connection, see [fastf1](https://theoehrly.github.io/Fast-F1/livetiming.html?highlight=live#important-notes))
 
 ## Further ideas
-- Display car position
-- Display telemetry
+- Display car position (`Position.z`)
+- Display telemetry (`CarData.z`)
 - Display (personal) fastest lap
 - Display sector times
+- Number pit stops and tires compound (`TimingAppData`)

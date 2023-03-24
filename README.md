@@ -1,6 +1,9 @@
 # f1-live-data
 You want a better view of the live data of a F1 race? f1-live-data is easy to use and customizable to your needs.
 
+## Requirements
+- Docker installed
+
 ## Quick start
 Tested on Ubuntu 20.04
 ```

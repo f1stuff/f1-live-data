@@ -11,9 +11,9 @@ D_LOOKUP = [[44, 'HAM', 'Mercedes', '#6CD3BF', 'SOLID'], [63, 'RUS', 'Mercedes',
             [81, 'PIA', 'McLaren', '#F58020', 'DOT'], [4, 'NOR', 'McLaren', '#F58020', 'SOLID'],
             [14, 'ALO', 'Aston Martin', '#358C75', 'SOLID'], [18, 'STR', 'Aston Martin', '#358C75', 'DOT'],
             [10, 'GAS', 'Alpine', '#2293D1', 'SOLID'], [31, 'OCO', 'Alpine', '#2293D1', 'DOT'],
-            [22, 'TSU', 'AlphaTauri', '#5E8FAA', 'SOLID'], [21, 'DEV', 'AlphaTauri', '#5E8FAA', 'DOT'],
+            [22, 'TSU', 'RB', '#5E8FAA', 'SOLID'], [3, 'RIC', 'RB', '#5E8FAA', 'DOT'],
             [27, 'HUL', 'Haas F1 Team', '#B6BABD', 'SOLID'], [20, 'MAG', 'Haas F1 Team', '#B6BABD', 'DOT'],
-            [24, 'ZHO', 'Alfa Romeo', '#C92D4B', 'DOT'], [77, 'BOT', 'Alfa Romeo', '#C92D4B', 'SOLID'],
+            [24, 'ZHO', 'Kick Sauber', '#C92D4B', 'DOT'], [77, 'BOT', 'Kick Sauber', '#C92D4B', 'SOLID'],
             [2, 'SAR', 'Williams', '#37BEDD', 'DOT'], [23, 'ALB', 'Williams', '#37BEDD', 'SOLID']]
 
 

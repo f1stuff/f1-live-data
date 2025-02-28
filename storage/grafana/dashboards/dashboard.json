@@ -321,7 +321,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "HAM"
+                            "options": "ANT"
                         },
                         "properties": [
                             {
@@ -361,7 +361,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "SAI"
+                            "options": "HAM"
                         },
                         "properties": [
                             {
@@ -416,7 +416,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "PER"
+                            "options": "LAW"
                         },
                         "properties": [
                             {
@@ -536,7 +536,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "OCO"
+                            "options": "DOO"
                         },
                         "properties": [
                             {
@@ -576,7 +576,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "DEV"
+                            "options": "HAD"
                         },
                         "properties": [
                             {
@@ -601,52 +601,52 @@
                     {
                         "matcher": {
                             "id": "byName",
+                            "options": "OCO"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#B6BABD",
+                                    "mode": "fixed"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
+                            "options": "BEA"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#B6BABD",
+                                    "mode": "fixed"
+                                }
+                            },
+                            {
+                                "id": "custom.lineStyle",
+                                "value": {
+                                    "dash": [
+                                        0,
+                                        5
+                                    ],
+                                    "fill": "dot"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
                             "options": "HUL"
                         },
                         "properties": [
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#B6BABD",
-                                    "mode": "fixed"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "matcher": {
-                            "id": "byName",
-                            "options": "MAG"
-                        },
-                        "properties": [
-                            {
-                                "id": "color",
-                                "value": {
-                                    "fixedColor": "#B6BABD",
-                                    "mode": "fixed"
-                                }
-                            },
-                            {
-                                "id": "custom.lineStyle",
-                                "value": {
-                                    "dash": [
-                                        0,
-                                        5
-                                    ],
-                                    "fill": "dot"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "matcher": {
-                            "id": "byName",
-                            "options": "ZHO"
-                        },
-                        "properties": [
-                            {
-                                "id": "color",
-                                "value": {
                                     "fixedColor": "#C92D4B",
                                     "mode": "fixed"
                                 }
@@ -666,7 +666,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "BOT"
+                            "options": "BOR"
                         },
                         "properties": [
                             {
@@ -681,7 +681,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "SAR"
+                            "options": "SAI"
                         },
                         "properties": [
                             {
@@ -919,7 +919,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "HAM"
+                            "options": "ANT"
                         },
                         "properties": [
                             {
@@ -959,7 +959,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "SAI"
+                            "options": "HAM"
                         },
                         "properties": [
                             {
@@ -1014,7 +1014,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "PER"
+                            "options": "LAW"
                         },
                         "properties": [
                             {
@@ -1134,7 +1134,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "OCO"
+                            "options": "DOO"
                         },
                         "properties": [
                             {
@@ -1174,7 +1174,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "DEV"
+                            "options": "HAD"
                         },
                         "properties": [
                             {
@@ -1199,52 +1199,52 @@
                     {
                         "matcher": {
                             "id": "byName",
+                            "options": "OCO"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#B6BABD",
+                                    "mode": "fixed"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
+                            "options": "BEA"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#B6BABD",
+                                    "mode": "fixed"
+                                }
+                            },
+                            {
+                                "id": "custom.lineStyle",
+                                "value": {
+                                    "dash": [
+                                        0,
+                                        5
+                                    ],
+                                    "fill": "dot"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
                             "options": "HUL"
                         },
                         "properties": [
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#B6BABD",
-                                    "mode": "fixed"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "matcher": {
-                            "id": "byName",
-                            "options": "MAG"
-                        },
-                        "properties": [
-                            {
-                                "id": "color",
-                                "value": {
-                                    "fixedColor": "#B6BABD",
-                                    "mode": "fixed"
-                                }
-                            },
-                            {
-                                "id": "custom.lineStyle",
-                                "value": {
-                                    "dash": [
-                                        0,
-                                        5
-                                    ],
-                                    "fill": "dot"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "matcher": {
-                            "id": "byName",
-                            "options": "ZHO"
-                        },
-                        "properties": [
-                            {
-                                "id": "color",
-                                "value": {
                                     "fixedColor": "#C92D4B",
                                     "mode": "fixed"
                                 }
@@ -1264,7 +1264,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "BOT"
+                            "options": "BOR"
                         },
                         "properties": [
                             {
@@ -1279,7 +1279,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "SAR"
+                            "options": "SAI"
                         },
                         "properties": [
                             {

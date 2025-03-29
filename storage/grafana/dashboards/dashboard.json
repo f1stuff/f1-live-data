@@ -416,7 +416,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "LAW"
+                            "options": "TSU"
                         },
                         "properties": [
                             {
@@ -561,7 +561,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "TSU"
+                            "options": "LAW"
                         },
                         "properties": [
                             {
@@ -1014,7 +1014,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "LAW"
+                            "options": "TSU"
                         },
                         "properties": [
                             {
@@ -1159,7 +1159,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "TSU"
+                            "options": "LAW"
                         },
                         "properties": [
                             {

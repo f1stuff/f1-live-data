@@ -1,7 +1,7 @@
 version: '3.3'
 services:
     grafana:
-        image: grafana/grafana:9.4.3
+        image: grafana/grafana:11.6.0
         container_name: grafana
         #restart: always
         ports:
@@ -12,7 +12,7 @@ services:
             - './storage/grafana/dashboards:/tmp/dashboards/'
 
     influxdb:
-        image: influxdb:2.6-alpine
+        image: influxdb:2.7.11-alpine
         container_name: influxdb
         #restart: always
         ports:

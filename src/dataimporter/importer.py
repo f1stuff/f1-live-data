@@ -61,7 +61,7 @@ def _start_overwrite(self):
 
 def store_live_data(write_api):
     """
-    Stores live data in a influx database
+    Stores live data in influx database
     This function only works if a f1 live session is active.
     """
     try:
@@ -70,7 +70,7 @@ def store_live_data(write_api):
             client.topics = ["Heartbeat", "WeatherData", "RaceControlMessages", "TimingData"]
             overwrite = partial(_to_file_overwrite, write_api)
             client._to_file = types.MethodType(overwrite,
-                                               client)  # Override _to_file methode from fastf1 so the data will be stored in db rather then in a file
+                                               client)  # Override _to_file methode from fastf1 so the data will be stored in db rather than in a file
             client.start = types.MethodType(_start_overwrite, client)
             client.start()
     except KeyboardInterrupt:

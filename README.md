@@ -3,12 +3,13 @@ You want a better view of the live data of a F1 race? f1-live-data is easy to us
 
 ## Requirements
 - Docker installed
+- python 3.13 (for developing)
 
 ## Quick start
-Tested on Ubuntu 20.04
+Tested on Ubuntu 22.04
 ```
 chmod -R 777 storage/
-docker-compose up -d
+docker compose up -d
 docker build -t data-importer-image .
 
 # if a f1 race is currently under way:
@@ -33,9 +34,9 @@ dataimporter process-mock-data /tmp/save.txt \
 
 ## Run the data-importer locally (for debugging)
 ```
-docker-compose up -d
+docker compose up -d
 pip install .
-data-importer process-mock-data saves/partial_saved_data_2023_03_05.txt --influx-url http://localhost:8086
+dataimporter process-mock-data saves/partial_saved_data_2023_03_05.txt --influx-url http://localhost:8086
 ```
 
 ## Features

@@ -327,22 +327,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#6CD3BF",
-                                    "mode": "fixed"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "matcher": {
-                            "id": "byName",
-                            "options": "RUS"
-                        },
-                        "properties": [
-                            {
-                                "id": "color",
-                                "value": {
-                                    "fixedColor": "#6CD3BF",
+                                    "fixedColor": "#27F4D2",
                                     "mode": "fixed"
                                 }
                             },
@@ -361,13 +346,28 @@
                     {
                         "matcher": {
                             "id": "byName",
+                            "options": "RUS"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#27F4D2",
+                                    "mode": "fixed"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
                             "options": "HAM"
                         },
                         "properties": [
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#F91536",
+                                    "fixedColor": "#E8002D",
                                     "mode": "fixed"
                                 }
                             },
@@ -392,7 +392,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#F91536",
+                                    "fixedColor": "#E8002D",
                                     "mode": "fixed"
                                 }
                             }
@@ -447,7 +447,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#F58020",
+                                    "fixedColor": "#FF8000",
                                     "mode": "fixed"
                                 }
                             },
@@ -472,7 +472,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#F58020",
+                                    "fixedColor": "#FF8000",
                                     "mode": "fixed"
                                 }
                             }
@@ -487,7 +487,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#358C75",
+                                    "fixedColor": "#229971",
                                     "mode": "fixed"
                                 }
                             }
@@ -502,7 +502,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#358C75",
+                                    "fixedColor": "#229971",
                                     "mode": "fixed"
                                 }
                             },
@@ -527,7 +527,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#2293D1",
+                                    "fixedColor": "#00A1E8",
                                     "mode": "fixed"
                                 }
                             }
@@ -542,7 +542,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#2293D1",
+                                    "fixedColor": "#00A1E8",
                                     "mode": "fixed"
                                 }
                             },
@@ -567,7 +567,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#5E8FAA",
+                                    "fixedColor": "#6692FF",
                                     "mode": "fixed"
                                 }
                             }
@@ -582,7 +582,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#5E8FAA",
+                                    "fixedColor": "#6692FF",
                                     "mode": "fixed"
                                 }
                             },
@@ -647,7 +647,22 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#C92D4B",
+                                    "fixedColor": "#52E252",
+                                    "mode": "fixed"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
+                            "options": "BOR"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#52E252",
                                     "mode": "fixed"
                                 }
                             },
@@ -666,28 +681,13 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "BOR"
-                        },
-                        "properties": [
-                            {
-                                "id": "color",
-                                "value": {
-                                    "fixedColor": "#C92D4B",
-                                    "mode": "fixed"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "matcher": {
-                            "id": "byName",
                             "options": "SAI"
                         },
                         "properties": [
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#37BEDD",
+                                    "fixedColor": "#1868DB",
                                     "mode": "fixed"
                                 }
                             },
@@ -712,7 +712,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#37BEDD",
+                                    "fixedColor": "#1868DB",
                                     "mode": "fixed"
                                 }
                             }
@@ -925,22 +925,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#6CD3BF",
-                                    "mode": "fixed"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "matcher": {
-                            "id": "byName",
-                            "options": "RUS"
-                        },
-                        "properties": [
-                            {
-                                "id": "color",
-                                "value": {
-                                    "fixedColor": "#6CD3BF",
+                                    "fixedColor": "#27F4D2",
                                     "mode": "fixed"
                                 }
                             },
@@ -959,13 +944,28 @@
                     {
                         "matcher": {
                             "id": "byName",
+                            "options": "RUS"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#27F4D2",
+                                    "mode": "fixed"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
                             "options": "HAM"
                         },
                         "properties": [
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#F91536",
+                                    "fixedColor": "#E8002D",
                                     "mode": "fixed"
                                 }
                             },
@@ -990,7 +990,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#F91536",
+                                    "fixedColor": "#E8002D",
                                     "mode": "fixed"
                                 }
                             }
@@ -1045,7 +1045,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#F58020",
+                                    "fixedColor": "#FF8000",
                                     "mode": "fixed"
                                 }
                             },
@@ -1070,7 +1070,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#F58020",
+                                    "fixedColor": "#FF8000",
                                     "mode": "fixed"
                                 }
                             }
@@ -1085,7 +1085,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#358C75",
+                                    "fixedColor": "#229971",
                                     "mode": "fixed"
                                 }
                             }
@@ -1100,7 +1100,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#358C75",
+                                    "fixedColor": "#229971",
                                     "mode": "fixed"
                                 }
                             },
@@ -1125,7 +1125,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#2293D1",
+                                    "fixedColor": "#00A1E8",
                                     "mode": "fixed"
                                 }
                             }
@@ -1140,7 +1140,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#2293D1",
+                                    "fixedColor": "#00A1E8",
                                     "mode": "fixed"
                                 }
                             },
@@ -1165,7 +1165,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#5E8FAA",
+                                    "fixedColor": "#6692FF",
                                     "mode": "fixed"
                                 }
                             }
@@ -1180,7 +1180,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#5E8FAA",
+                                    "fixedColor": "#6692FF",
                                     "mode": "fixed"
                                 }
                             },
@@ -1245,7 +1245,22 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#C92D4B",
+                                    "fixedColor": "#52E252",
+                                    "mode": "fixed"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
+                            "options": "BOR"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#52E252",
                                     "mode": "fixed"
                                 }
                             },
@@ -1264,28 +1279,13 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "BOR"
-                        },
-                        "properties": [
-                            {
-                                "id": "color",
-                                "value": {
-                                    "fixedColor": "#C92D4B",
-                                    "mode": "fixed"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "matcher": {
-                            "id": "byName",
                             "options": "SAI"
                         },
                         "properties": [
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#37BEDD",
+                                    "fixedColor": "#1868DB",
                                     "mode": "fixed"
                                 }
                             },
@@ -1310,7 +1310,7 @@
                             {
                                 "id": "color",
                                 "value": {
-                                    "fixedColor": "#37BEDD",
+                                    "fixedColor": "#1868DB",
                                     "mode": "fixed"
                                 }
                             }

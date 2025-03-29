@@ -1,8 +1,14 @@
 import logging
 from influxdb_client import Point, WritePrecision
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",  # Log format
+    handlers=[
+        logging.StreamHandler(),
+    ],
+)
 log = logging.getLogger(__name__)
-log.setLevel(logging.INFO)
 
 
 D_LOOKUP = [[12, 'ANT', 'Mercedes', '#6CD3BF', 'SOLID'], [63, 'RUS', 'Mercedes', '#6CD3BF', 'DOT'],

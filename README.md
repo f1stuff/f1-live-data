@@ -41,7 +41,7 @@ dataimporter process-mock-data saves/partial_saved_data_2023_03_05.txt --influx-
 
 ## Features
 ![](doc/full.png)
-- Select all of your favorite drivers (top, left)
+- Select only your favorite drivers (top, left)
 - Leaderboard with Interval, Gap to Leader, Last Lap Time
 - Lap time evolution
 - Race control messages

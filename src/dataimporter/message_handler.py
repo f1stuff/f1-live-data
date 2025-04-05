@@ -1,20 +1,25 @@
 import logging
 from influxdb_client import Point, WritePrecision
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",  # Log format
+    handlers=[
+        logging.StreamHandler(),
+    ],
+)
 log = logging.getLogger(__name__)
-log.setLevel(logging.INFO)
 
-
-D_LOOKUP = [[12, 'ANT', 'Mercedes', '#6CD3BF', 'SOLID'], [63, 'RUS', 'Mercedes', '#6CD3BF', 'DOT'],
-            [44, 'HAM', 'Ferrari', '#F91536', 'DOT'], [16, 'LEC', 'Ferrari', '#F91536', 'SOLID'],
-            [1, 'VER', 'Red Bull Racing', '#3671C6', 'SOLID'], [13, 'TSU', 'Red Bull Racing', '#3671C6', 'DOT'],
-            [81, 'PIA', 'McLaren', '#F58020', 'DOT'], [4, 'NOR', 'McLaren', '#F58020', 'SOLID'],
-            [14, 'ALO', 'Aston Martin', '#358C75', 'SOLID'], [18, 'STR', 'Aston Martin', '#358C75', 'DOT'],
-            [10, 'GAS', 'Alpine', '#2293D1', 'SOLID'], [7, 'DOO', 'Alpine', '#2293D1', 'DOT'],
-            [30, 'LAW', 'Racing Bulls', '#5E8FAA', 'SOLID'], [6, 'HAD', 'Racing Bulls', '#5E8FAA', 'DOT'],
+D_LOOKUP = [[12, 'ANT', 'Mercedes', '#27F4D2', 'DOT'], [63, 'RUS', 'Mercedes', '#27F4D2', 'SOLID'],
+            [44, 'HAM', 'Ferrari', '#E8002D', 'DOT'], [16, 'LEC', 'Ferrari', '#E8002D', 'SOLID'],
+            [1, 'VER', 'Red Bull Racing', '#3671C6', 'SOLID'], [22, 'TSU', 'Red Bull Racing', '#3671C6', 'DOT'],
+            [81, 'PIA', 'McLaren', '#FF8000', 'DOT'], [4, 'NOR', 'McLaren', '#FF8000', 'SOLID'],
+            [14, 'ALO', 'Aston Martin', '#229971', 'SOLID'], [18, 'STR', 'Aston Martin', '#229971', 'DOT'],
+            [10, 'GAS', 'Alpine', '#00A1E8', 'SOLID'], [7, 'DOO', 'Alpine', '#00A1E8', 'DOT'],
+            [30, 'LAW', 'Racing Bulls', '#6692FF', 'SOLID'], [6, 'HAD', 'Racing Bulls', '#6692FF', 'DOT'],
             [31, 'OCO', 'Haas', '#B6BABD', 'SOLID'], [87, 'BEA', 'Haas', '#B6BABD', 'DOT'],
-            [27, 'HUL', 'Kick Sauber', '#C92D4B', 'DOT'], [5, 'BOR', 'Kick Sauber', '#C92D4B', 'SOLID'],
-            [55, 'SAI', 'Williams', '#37BEDD', 'DOT'], [23, 'ALB', 'Williams', '#37BEDD', 'SOLID']]
+            [27, 'HUL', 'Kick Sauber', '#52E252', 'SOLID'], [5, 'BOR', 'Kick Sauber', '#52E252', 'DOT'],
+            [55, 'SAI', 'Williams', '#1868DB', 'DOT'], [23, 'ALB', 'Williams', '#1868DB', 'SOLID']]
 
 
 def driver_no_to_name(driver_no: str) -> str:

@@ -12,8 +12,14 @@ from influxdb_client import InfluxDBClient
 from influxdb_client.client.write_api import SYNCHRONOUS
 from fastf1.livetiming.client import SignalRClient
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",  # Log format
+    handlers=[
+        logging.StreamHandler(),
+    ],
+)
 log = logging.getLogger(__name__)
-log.setLevel(logging.INFO)
 
 token = "LoOFvHw1tUXrUZ8oUqaozmEjxxG9UNO5H5YfRI4cGu306xwQVu_KMNxRYRMrWbhdD886N2PuRgpo9v4v_58pHw=="
 org = "f1"
@@ -61,7 +67,7 @@ def _start_overwrite(self):
 
 def store_live_data(write_api):
     """
-    Stores live data in a influx database
+    Stores live data in influx database
     This function only works if a f1 live session is active.
     """
     try:
@@ -70,7 +76,7 @@ def store_live_data(write_api):
             client.topics = ["Heartbeat", "WeatherData", "RaceControlMessages", "TimingData"]
             overwrite = partial(_to_file_overwrite, write_api)
             client._to_file = types.MethodType(overwrite,
-                                               client)  # Override _to_file methode from fastf1 so the data will be stored in db rather then in a file
+                                               client)  # Override _to_file methode from fastf1 so the data will be stored in db rather than in a file
             client.start = types.MethodType(_start_overwrite, client)
             client.start()
     except KeyboardInterrupt:

@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 
 D_LOOKUP = [[12, 'ANT', 'Mercedes', '#27F4D2', 'DOT'], [63, 'RUS', 'Mercedes', '#27F4D2', 'SOLID'],
             [44, 'HAM', 'Ferrari', '#E8002D', 'DOT'], [16, 'LEC', 'Ferrari', '#E8002D', 'SOLID'],
-            [1, 'VER', 'Red Bull Racing', '#3671C6', 'SOLID'], [13, 'TSU', 'Red Bull Racing', '#3671C6', 'DOT'],
+            [1, 'VER', 'Red Bull Racing', '#3671C6', 'SOLID'], [22, 'TSU', 'Red Bull Racing', '#3671C6', 'DOT'],
             [81, 'PIA', 'McLaren', '#FF8000', 'DOT'], [4, 'NOR', 'McLaren', '#FF8000', 'SOLID'],
             [14, 'ALO', 'Aston Martin', '#229971', 'SOLID'], [18, 'STR', 'Aston Martin', '#229971', 'DOT'],
             [10, 'GAS', 'Alpine', '#00A1E8', 'SOLID'], [7, 'DOO', 'Alpine', '#00A1E8', 'DOT'],

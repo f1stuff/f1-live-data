@@ -536,7 +536,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "DOO"
+                            "options": "COL"
                         },
                         "properties": [
                             {
@@ -1134,7 +1134,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "DOO"
+                            "options": "COL"
                         },
                         "properties": [
                             {

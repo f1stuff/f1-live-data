@@ -22,7 +22,7 @@ dataimporter process-live-session \
 # else
 docker run -it --rm \
 --network f1-live-data_default \
--v ${PWD}/saves/partial_saved_data_2023_03_05.txt:/tmp/save.txt \
+-v ${PWD}/saves/partial_saved_data_2025_04_06.txt:/tmp/save.txt \
 data-importer-image \
 dataimporter process-mock-data /tmp/save.txt \
 --influx-url http://influxdb:8086
@@ -36,7 +36,7 @@ dataimporter process-mock-data /tmp/save.txt \
 ```
 docker compose up -d
 pip install .
-dataimporter process-mock-data saves/partial_saved_data_2023_03_05.txt --influx-url http://localhost:8086
+dataimporter process-mock-data saves/partial_saved_data_2025_04_06.txt --influx-url http://localhost:8086
 ```
 
 ## Features

@@ -71,7 +71,9 @@ def store_live_data(write_api):
     This function only works if a f1 live session is active.
     """
     try:
-        while True:
+        retries = 0
+        while retries < 5:
+            retries = retries + 1
             client = SignalRClient("unused.txt")
             client.topics = ["Heartbeat", "WeatherData", "RaceControlMessages", "TimingData"]
             overwrite = partial(_to_file_overwrite, write_api)

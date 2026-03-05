@@ -12,14 +12,15 @@ log = logging.getLogger(__name__)
 
 D_LOOKUP = [[12, 'ANT', 'Mercedes', '#27F4D2', 'DOT'], [63, 'RUS', 'Mercedes', '#27F4D2', 'SOLID'],
             [44, 'HAM', 'Ferrari', '#E8002D', 'DOT'], [16, 'LEC', 'Ferrari', '#E8002D', 'SOLID'],
-            [1, 'VER', 'Red Bull Racing', '#3671C6', 'SOLID'], [22, 'TSU', 'Red Bull Racing', '#3671C6', 'DOT'],
+            [1, 'VER', 'Red Bull Racing', '#3671C6', 'SOLID'], [6, 'HAD', 'Red Bull Racing', '#3671C6', 'DOT'],
             [81, 'PIA', 'McLaren', '#FF8000', 'DOT'], [4, 'NOR', 'McLaren', '#FF8000', 'SOLID'],
             [14, 'ALO', 'Aston Martin', '#229971', 'SOLID'], [18, 'STR', 'Aston Martin', '#229971', 'DOT'],
             [10, 'GAS', 'Alpine', '#00A1E8', 'SOLID'], [43, 'COL', 'Alpine', '#00A1E8', 'DOT'],
-            [30, 'LAW', 'Racing Bulls', '#6692FF', 'SOLID'], [6, 'HAD', 'Racing Bulls', '#6692FF', 'DOT'],
+            [30, 'LAW', 'Racing Bulls', '#6692FF', 'SOLID'], [41, 'LIN', 'Racing Bulls', '#6692FF', 'DOT'],
             [31, 'OCO', 'Haas', '#B6BABD', 'SOLID'], [87, 'BEA', 'Haas', '#B6BABD', 'DOT'],
-            [27, 'HUL', 'Kick Sauber', '#52E252', 'SOLID'], [5, 'BOR', 'Kick Sauber', '#52E252', 'DOT'],
-            [55, 'SAI', 'Williams', '#1868DB', 'DOT'], [23, 'ALB', 'Williams', '#1868DB', 'SOLID']]
+            [27, 'HUL', 'Audi', '#A7ADB1', 'SOLID'], [5, 'BOR', 'Audi', '#A7ADB1', 'DOT'],
+            [55, 'SAI', 'Williams', '#1868DB', 'DOT'], [23, 'ALB', 'Williams', '#1868DB', 'SOLID'],
+            [11, 'PER', 'Cadillac', '#AAAAAD', 'DOT'], [77, 'BOT', 'Cadillac', '#AAAAAD', 'SOLID']]
 
 
 def driver_no_to_name(driver_no: str) -> str:

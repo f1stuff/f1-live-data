@@ -416,7 +416,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "TSU"
+                            "options": "HAD"
                         },
                         "properties": [
                             {
@@ -576,7 +576,7 @@
                     {
                         "matcher": {
                             "id": "byName",
-                            "options": "HAD"
+                            "options": "LIN"
                         },
                         "properties": [
                             {
@@ -713,6 +713,46 @@
                                 "id": "color",
                                 "value": {
                                     "fixedColor": "#1868DB",
+                                    "mode": "fixed"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
+                            "options": "PER"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#AAAAAD",
+                                    "mode": "fixed"
+                                }
+                            },
+                            {
+                                "id": "custom.lineStyle",
+                                "value": {
+                                    "dash": [
+                                        0,
+                                        5
+                                    ],
+                                    "fill": "dot"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "matcher": {
+                            "id": "byName",
+                            "options": "BOT"
+                        },
+                        "properties": [
+                            {
+                                "id": "color",
+                                "value": {
+                                    "fixedColor": "#AAAAAD",
                                     "mode": "fixed"
                                 }
                             }
